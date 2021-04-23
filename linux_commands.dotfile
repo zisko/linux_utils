@@ -1,0 +1,6 @@
+show_chia_status() {
+    cd ~/repos/chia_blockchain
+    . ./activate
+    chia show -s
+    deactivate
+}
