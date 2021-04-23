@@ -1,6 +1,20 @@
-show_chia_status() {
-    cd ~/repos/chia_blockchain
+zisko_chia_status() {
+    cd ~/repos/chia-blockchain
     . ./activate
     chia show -s
     deactivate
+}
+
+zisko_chia_farm() {
+    cd ~/repos/chia-blockchain
+    . ./activate
+    chia farm summary
+    deactivate
+}
+
+zisko_mount_hdd_apfs(){
+    cd ~/repos/apfs-fuse/build
+    sudo ./apfs-fuse /dev/sdb2 /media/usbHDD/ -o allow_other
+    lsblk
+    popd
 }
