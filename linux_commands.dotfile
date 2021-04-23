@@ -12,6 +12,14 @@ zisko_chia_farm() {
     deactivate
 }
 
+zisko_chia_stop() {
+    cd ~/repos/chia-blockchain
+    . ./activate
+    chia stop all
+    deactivate
+}
+
+
 zisko_mount_hdd_apfs(){
     cd ~/repos/apfs-fuse/build
     sudo ./apfs-fuse /dev/sdb2 /media/usbHDD/ -o allow_other

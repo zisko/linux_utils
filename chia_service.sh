@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
-set -x #echo on
+# set -x #echo on
 cd ~/repos/chia-blockchain
 . ./activate
-chia start farmer node wallet
+chia start farmer
 deactivate
-popd
