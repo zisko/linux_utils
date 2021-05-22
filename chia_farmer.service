@@ -1,0 +1,12 @@
+[Unit]
+Description= This starts a chia farmer on startups
+Wants=network-online.target
+After=network.target network-online.target
+
+[Service]
+Type=forking 
+ExecStart=sh /home/%i/repos/linux_utils/chia_service.sh
+User=%i
+
+[Install]
+WantedBy=multi-user.target

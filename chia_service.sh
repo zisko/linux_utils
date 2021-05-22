@@ -1,5 +1,5 @@
 # set -x #echo on
-cd ~/repos/chia-blockchain
+cd $HOME/repos/chia-blockchain
 . ./activate
 chia start farmer
 deactivate
